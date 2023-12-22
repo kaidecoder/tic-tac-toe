@@ -24,7 +24,27 @@ function startGame(){
     clearGameBoard()
     setInfo()
 }
+startGame()
+
+/**
+ * ! Click on any square to draw the X.  Check if there is something there already if so, message, otherwise, draw
+**/
+function playerXMoves(){
+    box.forEach(square => {
+        console.log("inside the box")
+        square.addEventListener("click", e => {
+            e.preventDefault()
+            if(square.innerHTML === ("X") || square.innerHTML === ("O")){
+                return
+            }else{
+                square.innerHTML = "X"
+            }
+        })
+    })
+}
+playerXMoves()
+
 gameBoard.addEventListener("click", e => {
     e.preventDefault()
-    startGame()
+    // startGame()
 })
