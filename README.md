@@ -37,3 +37,6 @@ winning cells: 1,2,3 or 4,5,6 or 7,8,9 or 1,4,7 or 2,5,8 or 3,6,9 or 1,5,9 or 3,
 
 now what?  loop through the main array, and for each array if an x or y exists in each of those cells, then the player wins
 
+working on this right now:
+click functionality:  
+make player one active and when I click, I will see the x image
