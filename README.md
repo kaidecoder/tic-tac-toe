@@ -42,3 +42,5 @@ click functionality:
 make player one active and when I click, I will see the x image
 
 should I just generate the grid with images like before?
+
+Can I build this with classes?
