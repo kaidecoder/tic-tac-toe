@@ -36,26 +36,30 @@ function createBoard() {
     if (isActive) {
       createEl("div", `${i}`, "box", "chosen", "red-x");
       box = document.querySelector(".box");
+      let span = document.createElement('span')
+      span.innerHTML += `<span><img src="./red-x.jpg" style="width: 40px; height: 40px"/></span>`;
+      box.appendChild(span)
     } else {
       createEl("div", `${i}`, "box", "chosen", "black-0");
+      box.innerHTML += `<img src="./black-o.jpg" style="width: 40px; height: 40px"/>`;
     }
   }
 }
 
 //append the x/o with a number to each box
-function appendImg() {
-  console.log("in appendimg");
-  box = document.querySelector(".box");
-  isActive = true;
-  Array.from(box).forEach((boxlet) => {
-    console.log("inside boxlet");
-    if (boxlet) {
-      boxlet.innerHTML += `<img src="./red-x.jpg" style="width: 40px; height: 40px"/>`;
-    } else {
-      boxlet.innerHTML += `<img src="./black-o.jpg" style="width: 40px; height: 40px"/>`;
-    }
-  });
-}
+// function appendImg() {
+//   console.log("in appendimg");
+//   box = document.querySelector(".box");
+//   isActive = true;
+//   Array.from(box).forEach((boxlet) => {
+//     console.log("inside boxlet");
+//     if (boxlet) {
+//       boxlet.innerHTML += `<img src="./red-x.jpg" style="width: 40px; height: 40px"/>`;
+//     } else {
+//       boxlet.innerHTML += `<img src="./black-o.jpg" style="width: 40px; height: 40px"/>`;
+//     }
+//   });
+// }
 
 // //toggle the ships
 function togglePlayers(isActive) {
@@ -85,7 +89,7 @@ function startGame() {
   createBoard();
   box = document.querySelector("box");
   isActive = true;
-  appendImg();
+  // appendImg();
   togglePlayers(isActive);
   //   birdSound = new Audio("./sounds/birds.mp3");
   //   birdSound.play();
